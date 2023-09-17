@@ -7,9 +7,9 @@ This repo contains the project file which returns the following for the **select
 
 The code reads the data from the csv and stores it as a [polars DataFrame](https://pola-rs.github.io/polars/py-polars/html/reference/dataframe/index.html) for the analysis.
 
-This repo has been created using the [IDS-706_rg361_week-2](https://github.com/nogibjj/IDS-706_rg361_week-2) template which was created as week-2 mini-project.
+This repo has been created using the [IDS-706_rg361_week-3](https://github.com/nogibjj/IDS-706_rg361_week-3) template which was created as week-3 mini-project.
 
-Date Created: 2023-09-14
+Date Created: 2023-09-16
 
 ## Instructions
 

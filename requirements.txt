@@ -1,8 +1,13 @@
 #Devops
 black
+black_nbconvert
 pytest
-pylint
 pytest-cov
+pytest-playwright
+pylint
+ruff
+nbval
+nbqa
 
 #Data Science
 jupyter
@@ -10,3 +15,7 @@ pandas
 numpy
 matplotlib
 polars
+plotly
+pyarrow
+ipynb
+kaleido

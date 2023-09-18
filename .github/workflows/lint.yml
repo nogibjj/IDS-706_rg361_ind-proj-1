@@ -8,7 +8,7 @@ on:
       - completed
   
 jobs:
-  ruff:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,5 +17,5 @@ jobs:
           pip install ruff
       - run: |
           pip install nbqa
-      - run: |
-          make lint
+      - name: lint 
+        run: make lint

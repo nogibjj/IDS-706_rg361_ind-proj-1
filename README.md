@@ -1,4 +1,6 @@
-# Pandas Descriptive Statistics Script [![CI](https://github.com/nogibjj/IDS-706_rg361_week-3/actions/workflows/github_actions.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_week-3/actions/workflows/github_actions.yml)
+# Pandas Descriptive Statistics Script 
+
+[![Install](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml)  [![Test](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml)  [![Format](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml)  [![Lint](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml)
 
 This repo contains the project file which returns the following for the **selected column** from the dataset:
    1. returns the descriptive statistics (mean, median and standard deviation) as a list

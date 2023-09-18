@@ -8,7 +8,7 @@ on:
       - completed
   
 jobs:
-  black:
+  format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,5 +16,5 @@ jobs:
           pip install black
       - run: |
           pip install nbqa
-      - run: |
-          make format
+      - name: format
+        run: make format

@@ -16,5 +16,5 @@ jobs:
       run: sudo apt-get install -y build-essential gcc
     - name: install packages
       run: pip install -r requirements.txt
-    - run: |
-        make test
+    - name: test
+      run: make test

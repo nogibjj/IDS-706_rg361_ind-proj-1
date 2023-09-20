@@ -8,6 +8,6 @@ lint:
 	ruff check \codes/project_codes/*.py 
 
 test:
-	python -m pytest -vv  test_*.py
+	python -m pytest -vv --cov=codes/project_codes codes/test_codes/*.py
 
-all : install format lint test
+all : install test format lint 

@@ -1,11 +1,11 @@
 """This file tests the python script for descriptive statistics using Polars."""
 
-#import sys and add location of project files to path
+# import sys and add location of project files to path
 import sys
-sys.path.insert(0,'./codes/project_codes')
-
 import polars as pl
-from main_script import descriptive_stats
+
+sys.path.insert(0, "./codes/project_codes")
+from main_script import descriptive_stats  # noqa: E402
 
 
 def test_stat():
@@ -34,9 +34,9 @@ def test_stat():
     ] == descriptive_stats(fname)
 
     # Test case 3: wrong column number given, should return error message
-    assert "Please select valid column number"== descriptive_stats(fname, 10)
+    assert "Please select valid column number" == descriptive_stats(fname, 10)
 
-    #Test case 4: non numeric column selected, should return error code -1
+    # Test case 4: non numeric column selected, should return error code -1
     assert "Please select valid column number" == descriptive_stats(fname, 10)
 
 

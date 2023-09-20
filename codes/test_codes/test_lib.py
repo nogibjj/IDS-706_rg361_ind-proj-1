@@ -4,9 +4,9 @@ import polars as pl
 
 
 #import sys and add location of project files to path
-#import sys
-#sys.path.insert(0,'/workspaces/IDS-706_rg361_ind-proj-1/codes/project_codes')
-from codes.project_codes.lib import select_col
+import sys
+sys.path.insert(0,'./codes/project_codes')
+from lib import select_col
 
 
 def test_select_col():

@@ -2,7 +2,7 @@
 
 #import sys and add location of project files to path
 import sys
-sys.path.insert(0,'/workspaces/IDS-706_rg361_ind-proj-1/codes/project_codes')
+sys.path.insert(0,'./codes/project_codes')
 
 import polars as pl
 from main_script import descriptive_stats

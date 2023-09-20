@@ -16,6 +16,8 @@ jobs:
       run: sudo apt-get install -y build-essential gcc
     - name: install packages
       run: pip install -r requirements.txt
+    - name : add path
+      run : python -c "import sys; sys.path.insert(0,'./codes/project_codes')"
     - name: test
       run: make test
     - name: run python script to create outputs

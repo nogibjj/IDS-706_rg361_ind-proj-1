@@ -17,7 +17,7 @@ jobs:
     - name: install packages
       run: pip install -r requirements.txt
     - name : add path
-      run : python -c "import sys; print('\n'.join(sys.path))"
+      run : python -c "import sys; print(os.getcwd()"
     - name: test
       run: make test
     - name: run python script to create outputs

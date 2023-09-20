@@ -13,7 +13,7 @@
             // Options
             "NODE_VERSION": "none"
         },
-      "remoteEnv": {"PATH": "${containerEnv:PATH}:/workspaces/IDS-706_rg361_ind-proj-1/codes"}
+      "remoteEnv": {"PATH": "${containerEnv:PATH}:./codes/project_codes"}
     },
     // Configure tool-specific properties.
     "customizations": {

@@ -23,6 +23,7 @@ jobs:
       run: pip install -r requirements.txt
     - name: test
       run: make test
+      working-directory: ${{ github.workspace }}
     - name: run python script to create outputs
       run: python codes/test_codes/test_script.py
     - name: Archive and Upload Artifacts

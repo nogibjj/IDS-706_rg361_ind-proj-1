@@ -12,7 +12,8 @@
             "VARIANT": "3.10-bullseye",
             // Options
             "NODE_VERSION": "none"
-        }
+        },
+      "remoteEnv": {"PATH": "${containerEnv:PATH}:/workspaces/IDS-706_rg361_ind-proj-1/codes"}
     },
     // Configure tool-specific properties.
     "customizations": {

@@ -8,7 +8,7 @@ def select_col(df, col_num=None):
     if col_num == None:
         col = len(df.columns) - 1
     else:
-        if col_num > len(df.columns):
+        if (col_num > len(df.columns)) or(col_num <1) :
             return -1
         col = col_num - 1
     

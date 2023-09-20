@@ -24,7 +24,7 @@ def test_stat():
         df[col_name].std(),
     ] == descriptive_stats(fname, 4)
 
-    # Test case 2: col number not specified, shoudl use last column
+    # Test case 2: col number not specified, should use last column
     col = 4
     col_name = df.columns[col]
     assert [
@@ -35,6 +35,9 @@ def test_stat():
 
     # Test case 3: wrong column number given, should return error message
     assert "Please select valid column number"== descriptive_stats(fname, 10)
+
+    #Test case 4: non numeric column selected, should return error code -1
+    assert "Please select valid column number" == descriptive_stats(fname, 10)
 
 
 test_stat()

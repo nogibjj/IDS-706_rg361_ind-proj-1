@@ -1,7 +1,7 @@
 """ Function to return the descriptive statistics of a Polars Dataframe"""
 import polars as pl
 import matplotlib.pyplot as plt
-from lib import select_col
+from lib import select_col, summary_stats
 
 
 def descriptive_stats(fname, col=None):
@@ -18,15 +18,18 @@ def descriptive_stats(fname, col=None):
     plt.ylabel("Count of " + col_name)
     plt.xlabel(col_name)
     plt.title("Data Loaded from : " + fname)
-    plt.savefig("./resources/output.png")  # change the filepath here in case reequired
+    plt.savefig("./outputs/output.png")  # change the filepath here in case reequired
     plt.clf()
 
-    # Write the summary statistics to a summary.md in output folder
-    with open("./resources/summary.md", "w", encoding="utf-8") as f:
-        f.write("Mean: " + str(df[col_name].mean()) + "\n")
-        f.write("\n")
-        f.write("Median: " + str(df[col_name].median()) + "\n")
-        f.write("\n")
-        f.write("Standard Deviation: " + str(df[col_name].std()))
+    #calculate the summary statistics and store in a list
+    result = summary_stats(df, col_name)
 
-    return [df[col_name].mean(), df[col_name].median(), df[col_name].std()]
+    # Write the summary statistics to a summary.md in output folder
+    with open("./outputs/summary.md", "w", encoding="utf-8") as f:
+        f.write("Mean: " + str(result[0]) + "\n")
+        f.write("\n")
+        f.write("Median: " + str(result[1]) + "\n")
+        f.write("\n")
+        f.write("Standard Deviation: " + str(result[2]))
+
+    return result

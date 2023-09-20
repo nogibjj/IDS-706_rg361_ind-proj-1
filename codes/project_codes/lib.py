@@ -20,3 +20,6 @@ def select_col(df, col_num=None):
         return col_name
     else:
         return -1
+    
+def summary_stats(df, col_name):
+    return [df[col_name].mean(), df[col_name].median(), df[col_name].std()]

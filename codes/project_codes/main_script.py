@@ -9,10 +9,10 @@ def descriptive_stats(fname, col=None):
 
     col_name = select_col(df, col)
 
-    #check if error code(-1) is received, if no error code-proceed further
+    # check if error code(-1) is received, if no error code-proceed further
     if col_name == -1:
         return "Please select valid column number"
-    
+
     # create Histogram and save as output.png in output folder
     plt.hist(df.select(col_name))
     plt.ylabel("Count of " + col_name)
@@ -21,7 +21,7 @@ def descriptive_stats(fname, col=None):
     plt.savefig("./outputs/output.png")  # change the filepath here in case reequired
     plt.clf()
 
-    #calculate the summary statistics and store in a list
+    # calculate the summary statistics and store in a list
     result = summary_stats(df, col_name)
 
     # Write the summary statistics to a summary.md in output folder

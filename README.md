@@ -1,8 +1,8 @@
-# Pandas Descriptive Statistics Script 
+# Individual Project 1 : Polars Descriptive Statistics Script and Jupyter Notebook
 
 [![Install](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml)  [![Test](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml)  [![Format](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml)  [![Lint](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml)
 
-This repo contains the project file which returns the following for the **selected column** from the dataset:
+This repo contains the python script in the codes/project_files folder which returns the following for the **selected column** from the dataset:
    1. returns the descriptive statistics (mean, median and standard deviation) as a list
    2. prints these results to ``summary.md`` file
    3. generates a histogram of the selcted column and saves it as ``output.png`` file
@@ -16,14 +16,16 @@ Date Created: 2023-09-16
 ## Instructions
 
 Create a Codespace on main which will initialize the enviroment with the required packages and settings to execute the code.
+The main project files are present in the ``codes/project_codes`` folder
 
-The ``descriptive_stats`` function in ``main.py`` returns a list which contains the the [mean, median, standard deviation] of the selected column in the data. 
+# main_script.py:
+The ``descriptive_stats`` function in ``main_script.py`` returns a list which contains the the [mean, median, standard deviation] of the selected column in the data. 
 
-The code also writes these results to a ``summary.md`` file in the ``resources`` folder for future reference
+The code also writes these results to a ``summary.md`` file in the ``outputs`` folder for future reference
 
-The code stores the histogram as an image in the ``resources`` folder as ``output.png``
+The code stores the histogram as an image in the ``outputs`` folder as ``output.png``
 
-Note: The code saves the summary.md and output.png in the resources folder by default, please change this file path within main.py in case required
+Note: The code saves the summary.md and output.png in the resources folder by default, please change this file path within main_script.py in case required
 
 The function takes in the following 2 parameters:
    - fname (**required**) -  path or link to the csv file with the desired data
@@ -31,32 +33,55 @@ The function takes in the following 2 parameters:
 
    **Notes** 
    - Count the column numbers starting at 1
-   - The code assumes that the data has a header row, which is the default behaviour of the ``read_csv`` function from polars which is used to read the data and create a Dataframe 
+   - The code assumes that the data has a header row, which is the default behaviour of the ``read_csv`` function from polars which is used to read the data and create a Dataframe
 
-   
+# main_notebook.ipynb:
+The Jupyter notebook performs the same operations as the main_script.py, however it does not save the graph or the summary file in a folder, it displays them in-line in the jupyter notebook.
+
+The notebook can be executed in the virutal environment and the values for the dataset and columns can be modified as required.
+
+## Codes
+   all the python scripts and notebooks are present in the codes folder and organised into the following 2 directories:
+
+   ### 1. project_codes:
+   This folder contains the main scripts and notebooks which perform the functions in the repository:
+   - ``main_script.py`` : contains the ``descriptive_stats`` function which returns the descriptive statistics and wirtes the summary.md and output.png files as explained earlier
+   - ``main_notebook.ipynb`` : Jupyter notebook which performs the descriptive statics and plots the graph and displays them within the notebook
+   - ``lib.py`` : contains the functions which are used in the main script and notebook files:
+       * select_col : returns the column name for the selected column number (or last column) after verifying that they are numeric columns, else returns error code
+       * summary_stats : returns the [mean, median, standard deviation] of the dataframe as a list
+    
+   ### 2. test_codes:
+   This folder contains the following test files which are used by the github actions to verify the scripts in project_codes folder:
+   - ``test_lib`` : tests the correct funtioning of the lib.py file in the project_codes folder
+   - ``test_script`` : tests the correct funtioning of the main_script.py file in the project_codes folder
+
 ## Contents
 ### 1. README.md
    contains the information about the repository and instructions for using it
+   
 ### 2. requirements.txt
    contains the list of packages and libraries which are required for running the project. 
    
-### 3. github_actions.yml
-   github actions is used to automate the following 4 actions whenever a change is made to the files in the repository:
-   - ``install`` : installs the packages and libraries mentioned in the requirements.txt
-   - ``format`` : uses black to format the python files
-   - ``lint`` : uses pylint to lint the python files
-   - ``test`` : uses pytest to test the python codes using the test_* files to test the main files
+### 3. .github/workflows
+   different github actions are used to automate the following 4 actions whenever a change is made to the files in the repository:
+   - ``install.yml`` : installs the packages and libraries mentioned in the requirements.txt
+   - ``test.yml`` : uses ``pytest`` to test the python script and jupyter notebook (also uses ``nbval``) using the test_* files in the ``codes/test_codes`` folder.
+      **Note:** this action also has the trigger for automatically generating the output.png and summary.md file whenever any changes are made in the repository
+   - ``format.yml`` : uses ``black`` to format the python script and jupyter notebooks (also uses ``nbqa``)
+   - ``lint.yml`` : uses ``ruff`` to lint the python script and jupyter notebooks (also uses ``nbqa``)
+   
      
    **Note** -if all the processes run successfully the following output will be visible in github actions:
    ![Success Build](https://github.com/nogibjj/IDS-706_rg361_week-3/blob/3c5b6d480b1b61d060d5ed55a3915747071882a3/resources/success_build_week3.png)
    
 ### 4. Makefile
-   contains the instructions for the processes used in github actions and .devcontainer for creating the virtual environment
+   contains the instructions and sequences for the processes used in github actions and .devcontainer for creating the virtual environment
+   
 ### 5. .devcontainer
-   contains the ``dockerfile`` and ``devcontainer.json`` files which are used to build and define the setting of the virtual environment (codespaces - python) for running the code.
-### 6. Python files
-   - ``main.py`` : contains the ``descriptive_stats`` function which returns the descriptive statistics and wirtes the summary.md and output.png files
-   - ``test_main`` : a test file to verify the main.py file which contains a sample DataFrame and the expected results when testing with the  descriptive_stats function
+   contains the ``dockerfile`` and ``devcontainer.json`` files which are used to build and define the setting of the virtual environment (codespaces - python) for running the codes.
+
+
 
 ## Sample Outputs
    a sample Dataset of [blood-pressure from Github](https://github.com/Opensourcefordatascience/Data-sets/blob/master/blood_pressure.csv) has been loaded into the resources folder and is used for testing the code.

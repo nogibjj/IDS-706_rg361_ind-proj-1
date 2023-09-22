@@ -109,7 +109,7 @@ Visualization:
 
 ![Graph](outputs/output.png)
 
-Sample of summary.md file, actual file can be accessed at this [Link](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/3fb9103d4c13530ee5874cbd839a64a06620e012/outputs/summary.md):
+Sample of summary.md file, actual file can be accessed at this [Link](outputs/summary.md):
 
 ![summary output](resources/auto_summary.png)
 

@@ -104,7 +104,11 @@ The codes run as expected and pass the test cases:
 ![test execution](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/4ce63c14ebbaf014abea6aeb4cc7888a5ee57f7a/resources/test%20output_ind-proj.png)
 
 The following output files are automatically genrated by Github actions and stored in the outputs folder whenever there is a change in the directory:
+
+Visualization:
 ![Graph](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/3fb9103d4c13530ee5874cbd839a64a06620e012/outputs/output.png)
-![summary output](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/3fb9103d4c13530ee5874cbd839a64a06620e012/outputs/summary.md)
+
+Sample of summary.md file, actual file can be accessed at this [Link](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/3fb9103d4c13530ee5874cbd839a64a06620e012/outputs/summary.md):
+![summary output](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/blob/3fb9103d4c13530ee5874cbd839a64a06620e012/resources/auto_summary.png)
 
 **Note** : Only the last graph and summary are stored since the test file calls the function multiple times and the function clears the previous output before saving a new one

@@ -94,7 +94,7 @@ The notebook can be executed in the virutal environment and the values for the d
 ## Sample execution and Outputs
    a sample Dataset of [blood-pressure from Github](https://github.com/Opensourcefordatascience/Data-sets/blob/master/blood_pressure.csv) has been loaded into the resources folder and is used for testing the code.
 
-   Two test cases are run to check the proper functioning of the code and lib files:
+   Following test cases are run to check the proper functioning of the code and lib files:
    1. We specify the column number (in this test, column 4 is passed as argument to the function)
    2. We do not specify a column number (in this test, no argument is passed to the funtion)
    3. Invalid Column number is given, lib and main files return error codes

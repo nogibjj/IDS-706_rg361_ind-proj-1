@@ -2,7 +2,7 @@
 
 [![Install](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/install.yml)  [![Test](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/test.yml)  [![Format](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/format.yml)  [![Lint](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS-706_rg361_ind-proj-1/actions/workflows/lint.yml)
 
-[Youtube Link](https://youtu.be/957Sv1Bmb1Q) for Introduction and demo of code execution and Github Actions.
+Please watch the [Youtube Video](https://youtu.be/957Sv1Bmb1Q) for a brief overview and a demo of code execution and Github Actions.
 
 This repo contains the python script and notebook in the codes/project_files folder which perform the following general operations for the **selected column** from the dataset:
    1. calculate the descriptive statistics (mean, median and standard deviation)
